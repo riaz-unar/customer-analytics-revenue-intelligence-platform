@@ -1,0 +1,9 @@
+version: '3.9'
+
+services:
+  analytics:
+    build:
+      context: .
+    ports:
+      - "8501:8501"
+    command: streamlit run src/dashboard/streamlit_app.py --server.port 8501 --server.address 0.0.0.0
